@@ -20,10 +20,8 @@ The player authenticates with a user ID and a password, then joins an online gam
 | `fonction_othello.c/.h` | Game rules: board, valid moves, captures, display |
 | `MinMax.c/.h` | AI: Minimax, alpha-beta pruning, evaluation functions |
 | `main_othello.c/.h` | Entry point: network connection, game loop |
-| `userNetwork.h` | Header of the network library provided by the instructor |
-| `userSimple.c` | Minimal example client provided by the instructor |
 
-> **Note:** `userNetwork.h` and `userSimple.c` were provided by the course (author: Q. Giorgi). The closed-source `libothello` library they depend on is **not** included in this repository, so the project cannot be linked or run without it. The code is published to showcase the game logic and the AI.
+> **Note:** the networking layer (`userNetwork.h` and the closed-source `libothello` library) was provided by the course and is **not** included in this repository, so the project cannot be built or run as-is. The code is published to showcase the game logic and the AI.
 
 ## `fonction_othello.c`: game logic
 
@@ -73,7 +71,7 @@ This file implements the AI using Minimax search with alpha-beta pruning. It eva
 
 ## `main_othello.c`: networked game
 
-The main program plays Othello over the network by connecting to a server. It relies on `fonction_othello.h`, `main_othello.h`, `MinMax.h` and `userNetwork.h`.
+The main program plays Othello over the network by connecting to a server. It relies on `fonction_othello.h`, `main_othello.h`, `MinMax.h` and the course-provided network header `userNetwork.h`.
 
 ### Initialisation and authentication
 
@@ -99,7 +97,7 @@ When the game is no longer in progress, the final status (`g->state`) is display
 
 - **GCC**
 - **Make**
-- The instructor-provided `libothello` library (not included), placed in the project root.
+- The course-provided network header and `libothello` library (not included), placed in the project root.
 
 ### Build
 

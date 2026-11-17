@@ -13,8 +13,5 @@ MinMax.o:MinMax.c MinMax.h
 arbre: class_Arbre.c
 	gcc class_Arbre.c -o arbre -Wall -Werror -g -O0 && ./arbre
 
-userSimple: userSimple.c
-	$(CC) $(CFLAGS) -L. -o userSimple userSimple.c -lothello
-
 clean: 
 	rm *.o

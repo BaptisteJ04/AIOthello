@@ -1,7 +1,6 @@
 {
     "files.associations": {
         "fonction_othello.h": "c",
-        "usernetwork.h": "c",
         "minmax.h": "c"
     }
 }
